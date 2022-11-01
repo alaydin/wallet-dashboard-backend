@@ -2,7 +2,8 @@ const Moralis = require("moralis").default;
 const express = require('express')
 const app = express()
 const cors = require("cors");
-const port = 8080
+const fetch = require('node-fetch');
+const port = process.env.PORT || 8080
 require("dotenv").config();
 
 app.use(cors());
