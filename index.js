@@ -3,8 +3,9 @@ const express = require('express')
 const app = express()
 const cors = require("cors");
 const fetch = require('node-fetch');
-const PORT = process.env.PORT || 8080
 require("dotenv").config();
+const host = '0.0.0.0';
+const port = process.env.PORT || 8080
 
 app.use(cors());
 
@@ -12,8 +13,8 @@ app.get('/', (req, res) => {
     res.send('Hello World!')
 })
 
-app.listen(PORT, () => {
-    console.log(`Example app listening on PORT ${PORT}`)
+app.listen(port, () => {
+    console.log(`Example app listening on port ${port}`)
 })
 
 app.get('/nativeBalance', async (req, res) => {
