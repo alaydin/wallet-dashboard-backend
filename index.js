@@ -5,16 +5,16 @@ const cors = require("cors");
 const fetch = require('node-fetch');
 require("dotenv").config();
 const host = '0.0.0.0';
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 8080;
 
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.send('Hello World!')
-})
-
 app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
+})
+
+app.get('/', (req, res) => {
+    res.send('Hello World!')
 })
 
 app.get('/nativeBalance', async (req, res) => {
